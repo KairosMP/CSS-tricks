@@ -1,2 +1,2 @@
 # Tricks CSS
-Testando alguns truques em css. ::s
+Testando alguns truques em css. 😎
