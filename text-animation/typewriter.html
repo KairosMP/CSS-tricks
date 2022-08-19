@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typerwriter effect</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: hsl(0, 0%, 70%);
+            font-weight: bold;
+            font-family: 'Anonymous Pro', monospace;
+            letter-spacing: 7px;
+            cursor: pointer;
+            border-right: 2px solid hsl(0, 0%, 80%);
+            animation: typerwriter 4s steps(44) normal, blinkTextCursor 0.5s infinite;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes typerwriter {
+            from {
+                width: 0;
+            }
+            to {
+                width: 711px;
+            }
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: hsl(0, 0%, 80%);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>It was a glommy, rainy day...</h1>
+</body>
+</html>
