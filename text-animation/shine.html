@@ -32,11 +32,20 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: shine 3s infinite linear;
-
-           @keyframes shine {
-            
-           }
+            padding: 60px;
         }
+
+        @keyframes shine {
+            0% {
+                background-position: 0;
+            }
+            60% {
+                background-position: 600px;
+            }
+            100% {
+                background-position: 600px;
+            }
+           }
     </style>
 </head>
 <body>
