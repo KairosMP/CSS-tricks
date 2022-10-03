@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            margin: 0px;
+            color: #fff;
+        }
+
+        body {
+            margin: 2rem;
+            background-color: #212123;
+        }
+
+        body > div#conteudo {
+            margin: auto;
+            margin-top: 350px;
+        }
+
+        div#conteudo {
+            width: 400px;
+        }
+
+        div#carrousel {
+            display: grid;
+            grid-auto-flow: column;
+            scroll-behavior: auto;
+            gap: 1.2em;
+            overflow-y: auto;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+
+        div#carrousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        article.card {
+            scroll-snap-align: start;
+            border-radius: 30px;
+            min-height: 200px;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        article.card:nth-child(1) {
+            background: linear-gradient(-229deg, #fbd52d, #ef3a7b);
+        }
+
+        article.card:nth-child(2) {
+            background: linear-gradient(-229deg, #ff70af, #5fa8f5);
+        }
+
+        article.card:nth-child(3) {
+            background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+        }
+
+        article.card:nth-child(4) {
+            background: linear-gradient(-229deg, #88f7f9, #048fff);
+        }
+
+        article.card:nth-child(5) {
+            background: linear-gradient(-229deg, #0093e9, #80d0c7);
+        }
+
+        article.card:nth-child(6) {
+            background: linear-gradient(-229deg, #cf91ff, #5782f5);
+        }
+
+        article.card:nth-child(7) {
+            background: linear-gradient(-229deg, #642b73, #c6426e);
+        }
+    </style>
+</head>
+<body>
+    <div id="conteudo">
+        <div id="carrousel">
+            <article class="card">
+                <h1>HTML</h1>
+            </article>
+            <article class="card">
+                <h1>CSS</h1>
+            </article>
+            <article class="card">
+                <h1>JS</h1>
+            </article>
+            <article class="card">
+                <h1>React JS</h1>
+            </article>
+            <article class="card">
+                <h1>GIT</h1>
+            </article>
+            <article class="card">
+                <h1>LOGICA</h1>
+            </article>
+            <article class="card">
+                <h1>SEGUE NA BASE!</h1>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

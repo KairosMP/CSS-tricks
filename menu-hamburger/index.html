@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-content: flex-end;
+        }
+
+        main {
+            margin-top: 50vh;
+        }
+
+        div#navMenu > span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            border-radius: 9999px;
+            background-color: black
+        }
+
+        div#navMenu > span:not(:last-child) {
+            margin-bottom: 7px;
+        }
+
+        div#navMenu, div#navMenu > span {
+            transition: all .4s ease-in-out;
+        }
+
+        div#navMenu.active {
+            transition-delay: 0.8s;
+            transform: rotate(45deg);
+        }
+
+        div#navMenu.active > span:nth-child(2) {
+            width: 0;
+        }
+
+        div#navMenu.active > span:nth-child(1),
+        div#navMenu.active > span:nth-child(3) {
+            transition-delay: .4s;
+        }
+
+        div#navMenu.active > span:nth-child(1) {
+            transform: translateY(9px);
+        }
+        div#navMenu.active > span:nth-child(3) {
+            transform: translateY(-9px) rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </main>
+
+    <script>
+        const navMenu = document.querySelector('#navMenu')
+
+        navMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>
